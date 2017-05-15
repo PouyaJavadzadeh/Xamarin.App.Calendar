@@ -9,6 +9,8 @@
 			LoadApplication(new Xamarin.App.Calendar.App());
 
 			// Why this method works?
+
+
 			//Xamarin.Forms.Device.BeginInvokeOnMainThread(async () =>
 			//{
 			//	var store = await AppointmentManager.RequestStoreAsync(AppointmentStoreAccessType.AllCalendarsReadOnly);

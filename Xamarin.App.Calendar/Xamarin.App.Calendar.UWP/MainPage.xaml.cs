@@ -1,19 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-namespace Xamarin.App.Calendar.UWP
+﻿namespace Xamarin.App.Calendar.UWP
 {
 	public sealed partial class MainPage
 	{
@@ -22,6 +7,34 @@ namespace Xamarin.App.Calendar.UWP
 			this.InitializeComponent();
 
 			LoadApplication(new Xamarin.App.Calendar.App());
+
+			// Why this method works?
+			//Xamarin.Forms.Device.BeginInvokeOnMainThread(async () =>
+			//{
+			//	var store = await AppointmentManager.RequestStoreAsync(AppointmentStoreAccessType.AllCalendarsReadOnly);
+			//	var calendars = await store.FindAppointmentCalendarsAsync(FindAppointmentCalendarsOptions.IncludeHidden);
+			//	foreach (var item in calendars)
+			//	{
+			//		Debug.WriteLine(item.CanCancelMeetings);
+			//		Debug.WriteLine(item.CanCreateOrUpdateAppointments);
+			//		Debug.WriteLine(item.CanForwardMeetings);
+			//		Debug.WriteLine(item.CanNotifyInvitees);
+			//		Debug.WriteLine(item.CanProposeNewTimeForMeetings);
+			//		Debug.WriteLine(item.CanUpdateMeetingResponses);
+			//		Debug.WriteLine(item.DisplayColor);
+			//		Debug.WriteLine(item.DisplayName);
+			//		Debug.WriteLine(item.IsHidden);
+			//		Debug.WriteLine(item.LocalId);
+			//		Debug.WriteLine(item.MustNofityInvitees);
+			//		Debug.WriteLine(item.OtherAppReadAccess);
+			//		Debug.WriteLine(item.OtherAppWriteAccess);
+			//		Debug.WriteLine(item.RemoteId);
+			//		Debug.WriteLine(item.SourceDisplayName);
+			//		Debug.WriteLine(item.SummaryCardView);
+			//		Debug.WriteLine(item.SyncManager);
+			//		Debug.WriteLine(item.UserDataAccountId);
+			//	}
+			//});
 		}
 	}
 }

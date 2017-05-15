@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 using Xamarin.Forms;
 
 namespace Xamarin.App.Calendar
@@ -12,8 +8,9 @@ namespace Xamarin.App.Calendar
 		public App()
 		{
 			InitializeComponent();
+			MainPage = new Page();
 
-			MainPage = new Xamarin.App.Calendar.MainPage();
+			var events = Infrastructures.CrossCalendar.Events;
 		}
 
 		protected override void OnStart()
